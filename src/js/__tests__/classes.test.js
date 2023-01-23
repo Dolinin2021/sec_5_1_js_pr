@@ -17,6 +17,16 @@ test('invalid class instance name type', () => {
   expect(() => new Bowman(123456)).toThrow();
 });
 
+test('health parameter is correct', () => {
+  const bowman = new Bowman('Ilya');
+  expect(bowman.health).toBe(100);
+});
+
+test('level parameter is correct', () => {
+  const bowman = new Bowman('Ilya');
+  expect(bowman.level).toBe(1);
+});
+
 test('attack parameter is correct', () => {
   const bowman = new Bowman('Ilya');
   expect(bowman.attack).toBe(25);
